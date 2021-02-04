@@ -2,8 +2,9 @@ import { Module } from '@nestjs/common';
 
 import{MongooseModule} from '@nestjs/mongoose'
 import { ClientsModule } from './clients/clients.module';
+import { mongodbURL } from 'config/mongodb.config';
 @Module({
-  imports: [MongooseModule.forRoot('mongodb+srv://youssef97:QAuSeedzF6v2X66T@cluster0.6xdno.mongodb.net/test?retryWrites=true&w=majority'), ClientsModule],
+  imports: [MongooseModule.forRoot(mongodbURL), ClientsModule],
   controllers: [],
   providers: [],
 })

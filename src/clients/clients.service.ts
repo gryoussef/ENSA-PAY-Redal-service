@@ -66,9 +66,7 @@ export class ClientsService {
   
 
     insertClient():Promise<Client>{
-        const idClient=Math.random().toString();
         const newClient=new this.clientModel({
-            id:idClient,
             tel:'0766119237',
             creances:{
                 Facture_eau:true,
@@ -78,24 +76,32 @@ export class ClientsService {
                 {	
                     Montant : 969,
                     Paye : false,
-                    datedAt:'2020-12-09'
+                    datedAt:'2020-12-09',
+                    Creance:'EAU',
+                    Creancier:'REDAL',
                 },
                 {	
                     Montant : 120,
                     Paye : false,
-                    datedAt:'2021-01-09'
+                    datedAt:'2021-01-09',
+                    Creance:'EAU',
+                    Creancier:'REDAL',
                 },
                 {	
                     Montant : 152,
                     Paye : true,
-                    datedAt:'2021-11-09'
+                    datedAt:'2021-11-09',
+                    Creance:'EAU',
+                    Creancier:'REDAL',
                 }
                 ],
             FacturesElectricite : [
                 {
                     Montant : 120,
                     Paye : false,
-                    datedAt:'2020-11-09'
+                    datedAt:'2020-11-09',
+                    Creance:'ELECTRICITE',
+                    Creancier:'REDAL',
                 }
                 ]
         })

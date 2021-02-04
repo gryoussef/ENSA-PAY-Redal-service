@@ -11,6 +11,8 @@ export const ClientSchema=new mongoose.Schema({
             Montant : Number,
             Paye : Boolean,
             datedAt:Date,
+            Creance:String,
+            Creancier:String,
         }
         ],
     FacturesElectricite : [
@@ -18,6 +20,8 @@ export const ClientSchema=new mongoose.Schema({
             Montant : Number,
             Paye : Boolean,
             datedAt:Date,
+            Creance:String,
+            Creancier:String,
         }
         ]
 });
@@ -35,6 +39,8 @@ export interface Client extends mongoose.Document{
             Montant : Number,
             Paye : Boolean,
             datedAt:Date,
+            Creance:String,
+            Creancier:String,
         }
         ],
     FacturesElectricite : [
@@ -43,6 +49,8 @@ export interface Client extends mongoose.Document{
             Montant : Number,
             Paye : Boolean,
             datedAt:Date,
+            Creance:String,
+            Creancier:String,
             
         }
         ]
